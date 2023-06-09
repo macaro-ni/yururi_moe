@@ -24,6 +24,7 @@ devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
 
   scope module: 'public' do
     get root to: "homes#top"
+    get 'about' => 'homes#about', as: :about
   end
 
 
