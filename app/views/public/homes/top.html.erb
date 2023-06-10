@@ -1,22 +1,40 @@
+<main class="mb-auto">
+    <div class="container">
 
-<h3>ペン字練習帳</h3>
-  <%= link_to '美文字練習帳', 'https://bimozi-training.com' %>
-    <p>美しい文字を身につけるための文字練習アプリです。お手本を見ながら繰り返し練習する事で、綺麗な文字が書けるようになることを目的としています。(タブレット端末推称)</p>
+        <h3>ペン字練習帳</h3>
+        <div class="row">
+              <%= link_to '美文字練習帳', 'https://bimozi-training.com' %>
+                <p>美しい文字を身につけるための文字練習アプリです。お手本を見ながら繰り返し練習する事で、綺麗な文字が書けるようになることを目的としています。(タブレット端末推称)</p>
+        </div>
 
-<h3>LINEスタンプ</h3>
+        <h3>LINEスタンプ</h3>
+        <div class="row">
+            <table class="table">
+                <tbody>
+                    <tr>
+                      <td><%= image_tag "guratan.png", alt: "Stamp icon", class: "image", width: "150px" %></td>
+                       <td><%= link_to 'ぐらたん（もちもち）', 'https://store.line.me/stickershop/product/1697023/ja' %>
+                          <p>もちもちしている白い動物、ぐらたん。今日もなんだか楽しそう…。 誰でも気軽に使えるスタンプです。（ちょっぴり理系です。実験疲れのあなたにも癒しを。）</p></td>
+                    </tr>
+                    <tr>
+                        <td><%= image_tag "macaroni.png", alt: "Stamp icon", class: "image", width: "150px" %></td>
+                        <td><%= link_to 'マカロニはパスタの一種です', 'https://store.line.me/stickershop/product/1615963/ja' %>
+                           <p>マカロニっていろんな種類がありますよね。 淡い色使いでゆるいスタンプです。たぶん使いやすいです。</p></td>
+                    </tr>
+                    <tr>
+                        <td><%= image_tag "mamekichi.png", alt: "Stamp icon", class: "image", width: "150px" %></td>
+                        <td><%= link_to 'まめきちとわたし' ,'https://store.line.me/stickershop/product/1064256/ja' %>
+                       <p>ゆるっと暮らす2人と、その仲間たちです。</p></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-  <%= link_to 'ぐらたん（もちもち）', 'https://store.line.me/stickershop/product/1697023/ja' %>
-  <%= image_tag "guratan.png", alt: "Stamp icon", class: "image", width: "150px" %>
-   <p>もちもちしている白い動物、ぐらたん。今日もなんだか楽しそう…。 誰でも気軽に使えるスタンプです。（ちょっぴり理系です。実験疲れのあなたにも癒しを。）</p>
+        <h3>イラストギャラリー</h3>
+            <div class="row"></div>
 
-  <%= link_to 'マカロニはパスタの一種です', 'https://store.line.me/stickershop/product/1615963/ja' %>
-  <%= image_tag "macaroni.png", alt: "Stamp icon", class: "image", width: "150px" %>
-   <p>マカロニっていろんな種類がありますよね。 淡い色使いでゆるいスタンプです。たぶん使いやすいです。</p>
+            <h5>イラスト依頼</h5>
 
-  <%= link_to 'まめきちとわたし' ,'https://store.line.me/stickershop/product/1064256/ja' %>
-  <%= image_tag "mamekichi.png", alt: "Stamp icon", class: "image", width: "150px" %>
-   <p>ゆるっと暮らす2人と、その仲間たちです。</p>
 
-<h3>イラストギャラリー</h3>
-
-<h5>イラスト依頼</h5>
+    </div>
+</main>
