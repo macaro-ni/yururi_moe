@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   namespace :public do
     get 'homes/top'
   end
@@ -25,6 +26,7 @@ devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
   scope module: 'public' do
     get root to: "homes#top"
     get 'about' => 'homes#about', as: :about
+    resources :pictures, only: [:index, :show]
   end
 
 
