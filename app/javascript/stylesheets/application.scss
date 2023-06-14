@@ -18,3 +18,40 @@ p{
   font-family: 'Zen Old Mincho', serif;
   color: #685D69;
 }
+
+// Topページの見出しリボン（ここから）
+.ribbon1 {
+  line-height: 30px;
+  position: relative;
+  height: 30px;
+  margin-top: 2em;
+  padding: 0 2rem;
+  text-align: center;
+  color: #fff;
+  background: #685D69;
+  font-size: 1.2rem;
+}
+.ribbon1:before,
+.ribbon1:after {
+  position: absolute;
+  top: 0;
+  display: block;
+  height: 30px;
+  content: '';
+  border: 15px solid #685D69;
+}
+.ribbon1:before {
+  left: -20px;
+  border-left-width: 15px;
+  border-left-color: transparent;
+}
+.ribbon1:after {
+  right: -20px;
+  border-right-width: 15px;
+  border-right-color: transparent;
+}
+.ribbon1 span {
+  position: relative;
+  display: block;
+}
+// Topページの見出しリボン（ここまで）
