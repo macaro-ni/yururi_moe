@@ -1,0 +1,11 @@
+<h3>イラスト新規登録</h3>
+
+<%= form_with model: @picture do |f| %>
+  <%= f.label :name, "イラスト名" %>
+  <%= f.text_field :name %>
+
+  <%= f.label :genre, "ジャンル名" %>
+  <%= f.select :genre, {'人物': 1, 'パンダ': 2}, { include_blank: '選択してください'} %>
+
+  <%= f.submit %>
+<% end %>

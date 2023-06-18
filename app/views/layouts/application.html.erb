@@ -33,15 +33,28 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <%= link_to 'top', root_path, class: 'nav-link text-dark' %>
-              </li>
-              <li class="nav-item">
-                <%= link_to 'about', about_path, class: 'nav-link text-dark' %>
-              </li>
-              <li class="nav-item">
-                <%= link_to 'gallery', pictures_path, class: 'nav-link text-dark' %>
-              </li>
+
+                <% if admin_signed_in? %>
+                  <li class="nav-item">
+                    <%= link_to 'イラスト一覧', admin_pictures_path, class: 'nav-link text-dark' %>
+                  </li>
+                  <li class="nav-item">
+                    <%= link_to 'イラスト登録', new_admin_picture_path, class: 'nav-link text-dark' %>
+                  </li>
+                  <li class="nav-item">
+                    <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: 'nav-link text-dark' %>
+                  </li>
+                <% else %>
+                  <li class="nav-item">
+                    <%= link_to 'top', root_path, class: 'nav-link text-dark' %>
+                  </li>
+                  <li class="nav-item">
+                    <%= link_to 'about', about_path, class: 'nav-link text-dark' %>
+                  </li>
+                  <li class="nav-item">
+                    <%= link_to 'gallery', pictures_path, class: 'nav-link text-dark' %>
+                  </li>
+              <% end %>
             </ul>
           </div>
         </div>
