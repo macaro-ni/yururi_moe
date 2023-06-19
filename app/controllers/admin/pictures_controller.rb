@@ -11,8 +11,13 @@ class Admin::PicturesController < ApplicationController
   end
 
   def create
-    @picture=Picture.new
-    @picture.save
+    @picture = Picture.new(picture_params)
+    if @picture.save
+      flash[:notice] = "投稿に成功しました"
+      redirect_to admin_pictures_path
+    else
+      render "new"
+    end
   end
 
   def edit
@@ -20,4 +25,10 @@ class Admin::PicturesController < ApplicationController
 
   def update
   end
+
+  private
+  def picture_params
+   params.require(:picture).permit(:name,:genre_id)
+  end
+
 end

@@ -1,6 +1,15 @@
 <h3>イラスト新規登録</h3>
 
-<%= form_with model: @picture do |f| %>
+<!--登録エラーメッセージ-->
+<% if @picture.errors.any? %>
+  <%= @picture.errors.count %>件のエラーが発生しました
+  <% @picture.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+<% end %>
+
+
+<%= form_with model: @picture, url:admin_pictures_path do |f| %>
   <%= f.label :name, "イラスト名" %>
   <%= f.text_field :name %>
 

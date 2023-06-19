@@ -1,5 +1,10 @@
 <h3>イラストギャラリー</h3>
 
-<% @pictures.each do picture %>
-  <%= picture.image %>
+<%= flash[:notice] %>
+
+
+
+<% @pictures.each do |picture| %>
+    <%= picture.name %>
+    <%= picture.image %>
 <% end %>
