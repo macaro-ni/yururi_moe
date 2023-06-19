@@ -10,11 +10,27 @@
 
 
 <%= form_with model: @picture, url:admin_pictures_path do |f| %>
-  <%= f.label :name, "イラスト名" %>
-  <%= f.text_field :name %>
-
-  <%= f.label :genre, "ジャンル名" %>
-  <%= f.select :genre, {'人物': 1, 'パンダ': 2}, { include_blank: '選択してください'} %>
-
+  
+  <ul>
+    <li>
+      <%= f.label :genre_id, "ジャンル名" %>
+      <%= f.select :genre_id, {'Person': 1, 'Animal': 2, 'Others':3}, { include_blank: '選択してください'} %>
+    </li>
+  
+    <li>
+      <%= f.label :name, "イラスト名" %>
+      <%= f.text_field :name %>
+    </li>
+  
+    <li>
+      <%= f.label :introduction, "イラスト説明" %>
+      <%= f.text_area :introduction %>
+    </li>
+  
+    <li>
+      <%= f.label :image,"画像" %>
+      <%= f.file_field :image, accept: "image/*" %>
+    </li>
+  </ul>
   <%= f.submit %>
 <% end %>

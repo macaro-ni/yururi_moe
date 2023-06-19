@@ -9,3 +9,7 @@ Admin.create!(
    email: 'admin@test',
    password: 'admintest'
 )
+
+Genre.create!(id:1, name: "Person")
+Genre.create!(id:2, name: "Animal")
+Genre.create!(id:1, name: "Others")

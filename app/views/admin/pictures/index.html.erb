@@ -5,6 +5,9 @@
 
 
 <% @pictures.each do |picture| %>
-    <%= picture.name %>
-    <%= picture.image %>
+    <% if picture.image.attached? %>
+        <%= link_to image_tag(picture.image, size: "200x200"),admin_picture_path(picture.id) %>
+    <% else %>
+        <%= link_to image_tag('no_image', size: "200x200"), admin_picture_path(picture.id) %>
+    <% end %>
 <% end %>

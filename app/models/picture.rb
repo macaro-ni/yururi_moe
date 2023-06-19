@@ -3,6 +3,6 @@ class Picture < ApplicationRecord
   belongs_to :genre
 
   validates :name, presence: true
-  validates :genre, presence: true
-  # varidates :image, presence: true
+  validates :genre_id, presence: true
+  validates :image, presence: true
 end
