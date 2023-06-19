@@ -1,13 +1,19 @@
-<h3>イラストギャラリー</h3>
+<main class="mb-auto">
+    <div class="container">
 
-<%= flash[:notice] %>
+        <h3>イラストギャラリー</h3>
+
+        <%= flash[:notice] %>
 
 
 
-<% @pictures.each do |picture| %>
-    <% if picture.image.attached? %>
-        <%= link_to image_tag(picture.image, size: "200x200"),admin_picture_path(picture.id) %>
-    <% else %>
-        <%= link_to image_tag('no_image', size: "200x200"), admin_picture_path(picture.id) %>
-    <% end %>
-<% end %>
+        <% @pictures.each do |picture| %>
+            <% if picture.image.attached? %>
+                <%= link_to image_tag(picture.image, size: "200x200"),admin_picture_path(picture.id) %>
+            <% else %>
+                <%= link_to image_tag('no_image', size: "200x200"), admin_picture_path(picture.id) %>
+            <% end %>
+        <% end %>
+
+    </div>
+</div>

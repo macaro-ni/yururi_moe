@@ -1,1 +1,14 @@
-<p><%= @picture.name %>のshowページ</p>
+<main class="mb-auto">
+    <div class="container">
+
+
+        <p><%= @picture.name %>のshowページ</p>
+
+            <% if @picture.image.attached? %>
+                <%= link_to image_tag(@picture.image, size: "400x400") %>
+            <% else %>
+                <%= link_to image_tag('no_image', size: "400x400") %>
+            <% end %>
+
+    </div>
+</div>
