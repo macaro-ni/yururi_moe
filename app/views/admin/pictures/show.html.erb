@@ -14,5 +14,6 @@
             <% end %>
 
             <%= link_to "編集", edit_admin_picture_path(@picture.id) %>
+            <%= link_to "削除", admin_picture_path(@picture.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
     </div>
 </div>

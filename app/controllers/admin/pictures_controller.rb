@@ -36,6 +36,16 @@ class Admin::PicturesController < ApplicationController
     end
   end
 
+  def destroy
+    picture=Picture.find(params[:id])
+    if picture.destroy
+      flash[:notice] = "イラストの削除に成功しました"
+    else
+      flash[:notice] = "イラストの削除に成功しました"
+    end
+    redirect_to admin_pictures_path
+  end
+
   private
   def picture_params
    params.require(:picture).permit(:name,:genre_id,:introduction,:image)

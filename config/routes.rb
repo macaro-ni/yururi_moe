@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
 
 
-  namespace :admin do
-    resources :pictures
-  end
+
   # 顧客用
 # URL /customers/sign_in ...
 devise_for :customers, controllers: {
@@ -19,9 +17,8 @@ devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
 }
 
   namespace :admin do
-
+    resources :pictures
   end
-
 
   scope module: 'public' do
     get root to: "homes#top"
