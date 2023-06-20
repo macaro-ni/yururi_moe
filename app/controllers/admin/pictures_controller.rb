@@ -22,9 +22,18 @@ class Admin::PicturesController < ApplicationController
   end
 
   def edit
+    @picture=Picture.find(params[:id])
+
   end
 
   def update
+    picture=Picture.find(params[:id])
+    if picture.update(picture_params)
+      flash[:notice] = "編集内容の保存に成功しました"
+      redirect_to admin_picture_path(picture.id)
+    else
+      render "edit"
+    end
   end
 
   private
