@@ -65,6 +65,12 @@ border-radius: 50%;
 background-color: #fffbfb;
 text-align: center;
 
-position: relative;
-  display: inline-block;
 }
+
+/* スマートフォン用のスタイル */
+    @media (max-width: 767px) {
+        .d-flex.flex-wrap .stamp-box {
+            flex-basis: 100%;
+        }
+    }
+
