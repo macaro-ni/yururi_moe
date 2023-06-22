@@ -37,15 +37,20 @@
             <h3 class="ribbon1 col-xl-3 col-md-5 col-10">イラストギャラリー</h3>
         </div>
         <br>
-        <div class="text-center">
+
             <div class="row col-10 mx-auto">
                 <% @pictures.each do |picture| %>
                     <%= image_tag picture.image, size: "200x200" %>
                 <% end %>
-                <%= link_to 'more view→', pictures_path %>
+            </div>
+            <div class="moreLink" style="width: 120px;">
+                <%= link_to 'more view　', pictures_path %>
+                <div class="line-arrow"></div>
             </div>
 
+        <div class="text-center">
             <h5>イラスト依頼</h5>
+        </div>
 
 
     </div>
