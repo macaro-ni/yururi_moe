@@ -55,3 +55,16 @@ p{
   display: block;
 }
 // Topページの見出しリボン（ここまで）
+
+/*手書き風文字囲み*/
+.stamp-box {
+padding:2em;/*内側余白*/
+width: 300px;
+height: 300px;
+border-radius: 50%;
+background-color: #fffbfb;
+text-align: center;
+
+position: relative;
+  display: inline-block;
+}

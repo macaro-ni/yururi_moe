@@ -60,30 +60,32 @@
         </div>
       </nav>
     </header>
-    <main class="mb-auto">
+    <main>
     <%= yield %>
     </main>
     <footer class="bg-light pt-5 pb-4">
       <div class="container">
         <div class="row no-gutters">
-          <div class="col-md-4">
+          <div class="col-md-4"></div>
+          <div class="col-md-3">
             <p>ユルリモエの部屋</p>
-
+            <ul class="p-0 list-unstyled">
+              <li><%= link_to 'top', root_path, class: 'nav-link text-dark' %></li>
+              <li><%= link_to 'about', about_path, class: 'nav-link text-dark' %></li>
+              <li><%= link_to 'gallery', pictures_path, class: 'nav-link text-dark' %></li>
+            </ul>
           </div>
-          <div class="col-md-8">
+
+
+          <div class="col-md-4">
             <h6 class="text-muted mt-2 mb-3">SNS</h6>
             <ul class="p-0 list-unstyled">
               <li><%= link_to 'https://www.instagram.com/yururi_moe/' do %><i class="fa-brands fa-instagram"></i><% end %> yururi moe</li>
               <li><%= link_to 'https://www.instagram.com/gura_tan_tan/' do %><i class="fa-brands fa-instagram"></i><% end %> guratan</li>
             </ul>
-            <ul class="p-0 list-unstyled">
-
-              <li><%= link_to 'top', root_path, class: 'nav-link text-dark' %></li>
-              <li><%= link_to 'about', about_path, class: 'nav-link text-dark' %></li>
-              <li><%= link_to 'gallery', pictures_path, class: 'nav-link text-dark' %></li>
-
-            </ul>
           </div>
+
+
         </div>
       </div>
     </footer>

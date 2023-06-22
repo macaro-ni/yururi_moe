@@ -1,8 +1,5 @@
-<main class="mb-auto">
+
     <div class="container">
-
-
-        <p><%= @picture.name %></p>
 
             <span>「</span><%= @picture.name %><span>」</span>
             <%= @picture.introduction %>
@@ -14,6 +11,6 @@
                 <%= link_to image_tag('no_image', size: "400x400") %>
             <% end %>
 
+            <%= link_to "gallery→", pictures_path %>
 
     </div>
-</div>
