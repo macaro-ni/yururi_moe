@@ -1,14 +1,16 @@
 
-  <div class="container">
+<div class="container">
 
-      <div class="row justify-content-center">
+    <div class="row justify-content-center">
         <h3>Gallery</h3>
-        <%= link_to 'People', '#people-gallery' %>
-        <%= link_to 'Animals', '#animals-gallery' %>
+    </div>
+    <div class="row justify-content-center">
+        <%= link_to 'People', '#people-gallery' %><span>/</span>
+        <%= link_to 'Animals', '#animals-gallery' %><span>/</span>
         <%= link_to 'Others', '#others-gallery' %>
+    </div>
 
 
-      </div>
 
         <%= flash[:notice] %>
 
@@ -22,17 +24,24 @@
             <% end %>
         <% end %>
 
-        <% @pictures.each do |picture| %>
+      <div class="row justify-content-center">
         <p id="people-gallery">People</p>
+      </div>
+        <% @pictures.each do |picture| %>
           <% if picture.genre_id == 1 %>
               <% if picture.image.attached? %>
                   <%= link_to image_tag(picture.image, size: "200x200"), picture_path(picture.id) %>
               <% else %>
                   <%= link_to image_tag('no_image', size: "200x200"), picture_path(picture.id) %>
               <% end %>
-              
+            <% end %>
+          <% end %>
+
+      <div class="row justify-content-center">
         <p id="animals-gallery">Animals</p>
-          <% elsif picture.genre_id == 2 %>
+      </div>
+        <% @pictures.each do |picture| %>
+          <% if picture.genre_id == 2 %>
             <% if picture.image.attached? %>
                 <%= link_to image_tag(picture.image, size: "200x200"), picture_path(picture.id) %>
             <% else %>
@@ -41,6 +50,16 @@
           <% end %>
         <% end %>
 
+      <div class="row justify-content-center">
         <p id="others-gallery">Others</p>
-
-  </div>
+      </div>
+        <% @pictures.each do |picture| %>
+          <% if picture.genre_id == 3 %>
+            <% if picture.image.attached? %>
+                <%= link_to image_tag(picture.image, size: "200x200"), picture_path(picture.id) %>
+            <% else %>
+                <%= link_to image_tag('no_image', size: "200x200"), picture_path(picture.id) %>
+            <% end %>
+          <% end %>
+        <% end %>
+</div>

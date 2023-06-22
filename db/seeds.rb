@@ -12,4 +12,4 @@ Admin.create!(
 
 Genre.create!(id:1, name: "Person")
 Genre.create!(id:2, name: "Animal")
-Genre.create!(id:1, name: "Others")
+Genre.create!(id:3, name: "Others")
