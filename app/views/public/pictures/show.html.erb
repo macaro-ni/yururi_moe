@@ -1,2 +1,18 @@
-<h3>イラスト詳細</h3>
+<main class="mb-auto">
+    <div class="container">
 
+
+        <p><%= @picture.name %></p>
+
+            <%= @picture.name %>
+            <%= @picture.introduction %>
+
+            <% if @picture.image.attached? %>
+                <%= link_to image_tag(@picture.image, size: "400x400") %>
+            <% else %>
+                <%= link_to image_tag('no_image', size: "400x400") %>
+            <% end %>
+
+
+    </div>
+</div>

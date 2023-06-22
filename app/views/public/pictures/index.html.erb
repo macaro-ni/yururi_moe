@@ -1,2 +1,46 @@
-<h3>イラストギャラリー</h3>
 
+  <div class="container">
+
+      <div class="row justify-content-center">
+        <h3>Gallery</h3>
+        <%= link_to 'People', '#people-gallery' %>
+        <%= link_to 'Animals', '#animals-gallery' %>
+        <%= link_to 'Others', '#others-gallery' %>
+
+
+      </div>
+
+        <%= flash[:notice] %>
+
+
+
+        <% @pictures.each do |picture| %>
+            <% if picture.image.attached? %>
+                <%= link_to image_tag(picture.image, size: "200x200"), picture_path(picture.id) %>
+            <% else %>
+                <%= link_to image_tag('no_image', size: "200x200"), picture_path(picture.id) %>
+            <% end %>
+        <% end %>
+
+        <% @pictures.each do |picture| %>
+        <p id="people-gallery">People</p>
+          <% if picture.genre_id == 1 %>
+              <% if picture.image.attached? %>
+                  <%= link_to image_tag(picture.image, size: "200x200"), picture_path(picture.id) %>
+              <% else %>
+                  <%= link_to image_tag('no_image', size: "200x200"), picture_path(picture.id) %>
+              <% end %>
+              
+        <p id="animals-gallery">Animals</p>
+          <% elsif picture.genre_id == 2 %>
+            <% if picture.image.attached? %>
+                <%= link_to image_tag(picture.image, size: "200x200"), picture_path(picture.id) %>
+            <% else %>
+                <%= link_to image_tag('no_image', size: "200x200"), picture_path(picture.id) %>
+            <% end %>
+          <% end %>
+        <% end %>
+
+        <p id="others-gallery">Others</p>
+
+  </div>
