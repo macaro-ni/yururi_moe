@@ -22,7 +22,7 @@
 
   </head>
 <body class="d-flex flex-column vh-100">
-    <header class="shadow-sm">
+    <header>
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
           <a class="navbar-brand p-3" href="/"><%= image_tag'logo.png', width: '100' %></a>
@@ -61,12 +61,19 @@
       </nav>
     </header>
     <main>
+      <!--headerの境界線をモコモコさせたい（ここから）-->
+      <div>
+      <% 30.times do %>
+        <span class="rounded-circle bg-white">　　　</span>
+      <% end %>
+      </div>
+      <!--headerモコモコ(ここまで)-->
     <%= yield %>
       <div style="text-align:center;">
      <%= image_tag "foot-panda.png", width: "20%", class: "img-responsive" %>
       </div>
     </main>
-    <footer class="bg-light pt-5 pb-4">
+    <footer class="bg-white pt-5 pb-4">
       <div class="container">
         <div class="row no-gutters">
 
