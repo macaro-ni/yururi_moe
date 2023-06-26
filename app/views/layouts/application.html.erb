@@ -62,10 +62,14 @@
     </header>
     <main>
     <%= yield %>
+      <div style="text-align:right;">
+     <%= image_tag "aruku-panda.png", width: "15%", class: "img-responsive" %>
+      </div>
     </main>
     <footer class="bg-light pt-5 pb-4">
       <div class="container">
         <div class="row no-gutters">
+
           <div class="col-md-4"></div>
           <div class="col-md-3">
             <p>ユルリモエの部屋</p>
@@ -77,14 +81,13 @@
           </div>
 
 
-          <div class="col-md-4">
+          <div class="col-md-2">
             <h6 class="text-muted mt-2 mb-3">SNS</h6>
             <ul class="p-0 list-unstyled">
               <li><%= link_to 'https://www.instagram.com/yururi_moe/' do %><i class="fa-brands fa-instagram"></i><% end %> yururi moe</li>
               <li><%= link_to 'https://www.instagram.com/gura_tan_tan/' do %><i class="fa-brands fa-instagram"></i><% end %> guratan</li>
             </ul>
           </div>
-
 
         </div>
       </div>
