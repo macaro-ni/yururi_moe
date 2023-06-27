@@ -7,8 +7,8 @@ ruby '3.1.2'
 gem 'rails', '~> 6.1.7', '>= 6.1.7.3'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
-# Use Puma as the app server
-gem 'puma', '~> 5.0'
+# Use Puma as the app server(カリキュラムに沿って5.0から3.11に変更した)
+gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
@@ -55,5 +55,14 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# 以下８行はデプロイの際に追加
 gem 'devise'
 gem 'rails-i18n'
+gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+gem "net-smtp"
+gem "net-pop"
+gem "net-imap"
+
+end
