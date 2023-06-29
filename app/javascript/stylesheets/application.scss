@@ -99,3 +99,14 @@ text-align: center;
   --swiper-pagination-color: #ffffff;
 }
 // ここまでスライドショー
+
+// ここからページ先頭に戻るボタン
+#back {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+#back img {
+  width: 50px;
+}
+// ここまでページ先頭に戻るボタン

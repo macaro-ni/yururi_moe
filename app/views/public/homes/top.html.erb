@@ -46,7 +46,7 @@
               <!--ここまでスライドショー-->
 
 
-
+                <!--スライドショー入れる前に表示していた画像（後で消す）-->
                 <!--<div class="col-12">-->
                 <!--  %= image_tag "bimozi.png", width: "80%", class: "img-responsive" %>-->
                 <!--</div>-->
@@ -96,6 +96,25 @@
                 <div class="line-arrow"></div>
             </div>
 
+
+        <span id="back">
+          <a href="#">
+            <%= image_tag "arrow.png", style: "opacity: 0.2;" %>
+          </a>
+        </span>
+            
+        <script>
+            $(function() {
+              $('#back a').on('click',function(event){
+                // 以下のセレクタ('body, html')は「body要素またはhtml要素」の意味。
+                // 2つの要素を指定するのは、ユーザの利用環境によって指定対象の要素が変化するため。
+                $('body, html').animate({ 
+                  scrollTop:0
+                }, 800);
+                event.preventDefault();
+              });
+            });
+        </script>
 
 
     </div>
