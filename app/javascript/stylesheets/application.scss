@@ -88,3 +88,14 @@ text-align: center;
   color: #5D535E;
 }
 
+// 以下スライドショー
+.swiper {
+  width: 500px;
+  height: 350px;
+}
+
+:root {
+  --swiper-navigation-color: #ffffff;
+  --swiper-pagination-color: #ffffff;
+}
+// ここまでスライドショー
