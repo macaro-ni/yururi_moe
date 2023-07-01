@@ -40,3 +40,4 @@ yarn-debug.log*
 .yarn-integrity
 # 以下デプロイ時に追加
 /.env
+/vendor/*
