@@ -57,7 +57,7 @@ p{
 }
 // Topページの見出しリボン（ここまで）
 
-/*手書き風文字囲み*/
+/*LINEスタンプの囲み円*/
 .stamp-box {
 padding:2em;/*内側余白*/
 width: 300px;
@@ -65,7 +65,11 @@ height: 300px;
 border-radius: 50%;
 background-color: #fffbfb;
 text-align: center;
+}
 
+// LINEスタンプhover時に大きく
+.image:hover{
+  transform:scale(1.1,1.1);
 }
 
 /* スマートフォン用のスタイル */
@@ -90,8 +94,7 @@ text-align: center;
 
 // 以下スライドショー
 .swiper {
-  width: 500px;
-  height: 350px;
+  width: 100%;
 }
 
 :root {

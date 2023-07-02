@@ -8,15 +8,16 @@
 
         <div class="row justify-content-center">
             <h3 class="ribbon1 col-xl-3 col-md-5 col-10">ペン字練習サイト</h3>
-        <div class="text-center">
+        </div>
+        <div class="row justify-content-center">
+        <div class="col-12 col-md-10">
 
             <!--以下スライドショー-->
-              <div class="swiper">
-                  <div class="swiper-wrapper">
-                     <%= image_tag "bimozi.png" %>
-                    <div class="swiper-slide">Slide 1</div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
+                <div class="swiper">
+                  <div class="swiper-wrapper col-10 col-md-6">
+                    <div class="swiper-slide"><%= image_tag "bimozi1.jpg", width: "100%", class: "img-responsive" %></div>
+                    <div class="swiper-slide"><%= image_tag "bimozi2.jpg", width: "100%", class: "img-responsive" %></div>
+                    <div class="swiper-slide"><%= image_tag "bimozi3.jpg", width: "100%", class: "img-responsive" %></div>
                   </div>
                   <!-- ページネーションの要素 -->
                   <div class="swiper-pagination"></div>
@@ -25,35 +26,13 @@
                   <div class="swiper-button-next"></div>
                 </div>
 
-                <script>
-                    const swiper = new Swiper('.swiper', {
-                      //オプションの設定
-                      loop: true, //最後までスライドしたら最初の画像に戻る
-
-                      //ページネーション表示の設定
-                      pagination: {
-                        el: '.swiper-pagination', //ページネーションの要素
-                      },
-
-                      //ナビゲーションボタン（矢印）表示の設定
-                      navigation: {
-                        nextEl: '.swiper-button-next', //「次へボタン」要素の指定
-                        prevEl: '.swiper-button-prev', //「前へボタン」要素の指定
-                      }
-                       });
-
-                </script>
               <!--ここまでスライドショー-->
 
+                <div class="text-center">
+                  <%= link_to '美文字練習帳', 'https://bimozi-training.com' %>
 
-                <!--スライドショー入れる前に表示していた画像（後で消す）-->
-                <!--<div class="col-12">-->
-                <!--  %= image_tag "bimozi.png", width: "80%", class: "img-responsive" %>-->
-                <!--</div>-->
-
-              <%= link_to '美文字練習帳', 'https://bimozi-training.com' %>
-
-                <p>美しい文字を身につけるための文字練習アプリです。お手本を見ながら繰り返し練習する事で、綺麗な文字が書けるようになることを目的としています。(タブレット端末推称)</p>
+                    <p>美しい文字を身につけるための文字練習アプリです。お手本を見ながら繰り返し練習する事で、綺麗な文字が書けるようになることを目的としています。(タブレット端末推称)</p>
+                </div>
             </div>
         </div>
 
@@ -86,7 +65,7 @@
         </div>
         <br>
 
-            <div class="row col-10 mx-auto">
+            <div class="col-12 mx-auto">
                 <% @pictures.each do |picture| %>
                     <%= image_tag picture.image, size: "200x200" %>
                 <% end %>
@@ -96,25 +75,12 @@
                 <div class="line-arrow"></div>
             </div>
 
-
+        <!--ページの上に移動できる矢印-->
         <span id="back">
           <a href="#">
             <%= image_tag "arrow.png", style: "opacity: 0.2;" %>
           </a>
         </span>
-            
-        <script>
-            $(function() {
-              $('#back a').on('click',function(event){
-                // 以下のセレクタ('body, html')は「body要素またはhtml要素」の意味。
-                // 2つの要素を指定するのは、ユーザの利用環境によって指定対象の要素が変化するため。
-                $('body, html').animate({ 
-                  scrollTop:0
-                }, 800);
-                event.preventDefault();
-              });
-            });
-        </script>
 
 
     </div>
