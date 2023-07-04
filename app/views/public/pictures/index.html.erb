@@ -12,8 +12,6 @@
 
 
 
-        <%= flash[:notice] %>
-
 
 
         <% @pictures.each do |picture| %>
@@ -24,9 +22,11 @@
             <% end %>
         <% end %>
 
+
       <div class="row justify-content-center">
-        <p id="people-gallery">People</p>
+        <p id="people-gallery", class="semicircle-top text-center mb-0">People</p>
       </div>
+      <div class="border border-white border-0 bg-white px-3 py-3">
         <% @pictures.each do |picture| %>
           <% if picture.genre_id == 1 %>
               <% if picture.image.attached? %>
@@ -36,10 +36,12 @@
               <% end %>
             <% end %>
           <% end %>
+      </div>
 
       <div class="row justify-content-center">
-        <p id="animals-gallery">Animals</p>
+        <p id="animals-gallery", class="semicircle-top text-center mb-0">Animals</p>
       </div>
+      <div class="border border-white border-0 bg-white px-3 py-3">
         <% @pictures.each do |picture| %>
           <% if picture.genre_id == 2 %>
             <% if picture.image.attached? %>
@@ -49,10 +51,12 @@
             <% end %>
           <% end %>
         <% end %>
+      </div>
 
       <div class="row justify-content-center">
-        <p id="others-gallery">Others</p>
+        <p id="others-gallery", class="semicircle-top text-center mb-0">Others</p>
       </div>
+      <div class="border border-white border-0 bg-white px-3 py-3">
         <% @pictures.each do |picture| %>
           <% if picture.genre_id == 3 %>
             <% if picture.image.attached? %>
@@ -62,4 +66,13 @@
             <% end %>
           <% end %>
         <% end %>
+      </div>
+
+
+        <!--ページの上に移動できる矢印-->
+        <span id="back">
+          <a href="#">
+            <%= image_tag "arrow.png", style: "opacity: 0.2;" %>
+          </a>
+        </span>
 </div>

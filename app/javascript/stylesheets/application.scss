@@ -113,3 +113,15 @@ text-align: center;
   width: 50px;
 }
 // ここまでページ先頭に戻るボタン
+
+// 半円
+.semicircle-top {
+  width: 150px;
+  height: 75px;
+  border: solid 4px #696969;
+  border-radius: 75px 75px 0 0; /* 下側を丸める */
+  border-bottom: 0; /* 直線部分を消す */
+  margin: 10px;
+  border: none;
+  background-color: white;
+}
