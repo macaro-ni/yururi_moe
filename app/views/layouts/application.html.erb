@@ -41,20 +41,20 @@
 
                 <% if admin_signed_in? %>
                   <li class="nav-item">
-                    <%= link_to 'イラスト一覧', admin_pictures_path, class: 'nav-link text-dark' %>
+                    <%= link_to 'イラスト一覧', admin_pictures_path, class: 'nav-link' %>
                   </li>
                   <li class="nav-item">
-                    <%= link_to 'イラスト登録', new_admin_picture_path, class: 'nav-link text-dark' %>
+                    <%= link_to 'イラスト登録', new_admin_picture_path, class: 'nav-link' %>
                   </li>
                   <li class="nav-item">
-                    <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: 'nav-link text-dark' %>
+                    <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: 'nav-link' %>
                   </li>
                 <% else %>
                   <li class="nav-item">
-                    <%= link_to 'top', root_path, class: 'nav-link text-dark' %>
+                    <%= link_to 'top', root_path, class: 'nav-link' %>
                   </li>
                   <li class="nav-item">
-                    <%= link_to 'gallery', pictures_path, class: 'nav-link text-dark' %>
+                    <%= link_to 'gallery', pictures_path, class: 'nav-link' %>
                   </li>
               <% end %>
             </ul>
@@ -75,25 +75,26 @@
      <%= image_tag "foot-panda.png", width: "20%", class: "img-responsive" %>
       </div>
     </main>
-    <footer class="bg-white pt-5 pb-4">
+    <footer class="pt-5 pb-4", style="background-color: #877b80;">
       <div class="container">
         <div class="row no-gutters">
 
-          <div class="col-md-4"></div>
-          <div class="col-md-3">
-            <p>ユルリモエの部屋</p>
+          <div class="col-md-3"></div>
+          <div class="col-md-4 my-1">
+            <p class="text-light font-hina mb-1 text-center">ユルリモエの部屋</p>
             <ul class="p-0 list-unstyled">
-              <li><%= link_to 'top', root_path, class: 'nav-link text-dark' %></li>
-              <li><%= link_to 'gallery', pictures_path, class: 'nav-link text-dark' %></li>
+              <li><%= link_to 'top', root_path, class: 'p-0 nav-link text-light text-center' %></li>
+              <li><%= link_to 'gallery', pictures_path, class: 'p-0 nav-link text-light text-center' %></li>
             </ul>
           </div>
 
 
           <div class="col-md-2">
-            <h6 class="text-muted mt-2 mb-3">SNS</h6>
-            <ul class="p-0 list-unstyled">
-              <li><%= link_to 'https://www.instagram.com/yururi_moe/' do %><i class="fa-brands fa-instagram"></i><% end %> yururi moe</li>
-              <li><%= link_to 'https://www.instagram.com/gura_tan_tan/' do %><i class="fa-brands fa-instagram"></i><% end %> guratan</li>
+            <p class="mb-1 text-pink fint-hina">-----sns------</p>
+            <ul class="p-0 list-unstyled text-light">
+              <li class="text-pink"><%= link_to 'https://www.instagram.com/yururi_moe/' do %><i class="fa-brands fa-instagram text-pink"></i><% end %> yururi moe</li>
+              <li class="text-pink"><%= link_to 'https://www.instagram.com/gura_tan_tan/' do %><i class="fa-brands fa-instagram text-pink"></i><% end %> guratan</li>
+              <li><p class="text-pink">---------------</p></li>
             </ul>
           </div>
 

@@ -8,7 +8,15 @@ body {
   line-height: 1.8;
 }
 
-h3{
+// bootstrapのカスタマイズ（ここから）
+
+a:link, a:visited, a:hover, a:active{
+  color: #5D535E;
+}
+// （ここまで：bootstrapのカスタマイズ）
+
+
+h3, .font-hina{
   font-family: 'Hina Mincho', serif;
   color: #5D535E;
   letter-spacing: 0.1em;
@@ -19,6 +27,10 @@ p{
   color: #685D69;
 }
 
+// 汎用ピンク
+.text-pink{
+  color: #FFEBEC;
+}
 
 // Topページの見出しリボン（ここから）
 .ribbon1 {
@@ -67,9 +79,14 @@ background-color: #fffbfb;
 text-align: center;
 }
 
-// LINEスタンプhover時に大きく
+// imageクラスをhover時に大きく（lineスタンプ画像）
 .image:hover{
   transform:scale(1.1,1.1);
+}
+
+// 文字hover時に大きく
+.letter-hover:hover{
+  transform:scale(1.2,1.2);
 }
 
 /* スマートフォン用のスタイル */
