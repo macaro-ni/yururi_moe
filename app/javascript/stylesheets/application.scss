@@ -9,9 +9,17 @@ body {
 }
 
 // bootstrapのカスタマイズ（ここから）
-
 a:link, a:visited, a:hover, a:active{
   color: #5D535E;
+}
+.btn{
+  border-radius: 0;
+  border-color: #877b80;
+}
+.btn:hover{
+  background-color: #877b80;
+  color: white;
+  opacity: 0.8;
 }
 // （ここまで：bootstrapのカスタマイズ）
 

@@ -30,10 +30,7 @@
 
                 <div class="text-center">
                     <p>美しい文字を身につけるための文字練習アプリです。お手本を見ながら繰り返し練習する事で、綺麗な文字が書けるようになることを目的としています。(タブレット端末推称)</p>
-                    <div class="moreLink" style="width: 120px;">
-                        <%= link_to 'Lets practice !　', 'https://bimozi-training.com' %>
-                    <div class="line-arrow"></div>
-            </div>
+                    <%= link_to 'Lets practice!', 'https://bimozi-training.com', class: "btn .btn:hover py-2 px-5" %>
                 </div>
             </div>
         </div>
@@ -78,10 +75,10 @@
                     <%= image_tag picture.image, size: "200x200" %>
                 <% end %>
             </div>
-            <div class="moreLink" style="width: 120px;">
-                <%= link_to 'more view　', pictures_path %>
-                <div class="line-arrow"></div>
+            <div class="text-center mt-4">
+                <%= link_to 'more view', pictures_path, class: "btn .btn:hover py-2 px-5 text-center" %>
             </div>
+
 
         <!--ページの上に移動できる矢印-->
         <span id="back">
