@@ -15,11 +15,14 @@ a:link, a:visited, a:hover, a:active{
 .btn{
   border-radius: 0;
   border-color: #877b80;
+  background-color: #877b80;
+  opacity: 0.8;
+  color: white;
 }
 .btn:hover{
   background-color: #877b80;
   color: white;
-  opacity: 0.8;
+  opacity: 1;
 }
 // （ここまで：bootstrapのカスタマイズ）
 

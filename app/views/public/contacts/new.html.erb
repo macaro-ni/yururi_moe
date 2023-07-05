@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <h3>Contact</h3>
+  </div>
+  <div class="row justify-content-center">
+    <ul class="list-unstyled">
+        <%= form_with model: @contact, url: contacts_confirm_path do |f| %>
+          <li><%= f.label :name, "Name", class: "mb-0" %></li>
+          <%= f.text_field :name, size: "30", style: "border: none" %>
+
+          <li><%= f.label :email, "Mail Address", class: "mb-0" %></li>
+          <%= f.email_field :email, size: "30", style: "border: none" %>
+
+          <li><%= f.label :message, "Message", class: "mb-0" %></li>
+          <%= f.text_area :message, size: "30", style: "border: none" %>
+
+          <li class="text-center"><%= f.submit "Submit", class: "btn btn:hover" %></li>
+
+        <% end %>
+    </ul>
+  </div>
+</div>

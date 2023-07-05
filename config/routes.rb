@@ -23,6 +23,9 @@ devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
   scope module: 'public' do
     get root to: "homes#top"
     resources :pictures, only: [:index, :show]
+    resources :contacts, only: [:new,:create]
+    post 'contacts/confirm', to: 'contacts#confirm'
+    get 'contacts/complete', to: 'contacts#complete'
   end
 
 
