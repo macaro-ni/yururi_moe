@@ -9,8 +9,11 @@ body {
 }
 
 // bootstrapのカスタマイズ（ここから）
-a:link, a:visited, a:hover, a:active{
+a,a:link, a:hover, a:active{
   color: #5D535E;
+}
+a:visited{
+
 }
 .btn{
   border-radius: 0;
@@ -24,10 +27,16 @@ a:link, a:visited, a:hover, a:active{
   color: white;
   opacity: 1;
 }
+.icon .btn{
+  border-radius: 40%;
+  border-color: #d6d0d0;
+  background-color: white;
+  color: #877b80;
+}
 // （ここまで：bootstrapのカスタマイズ）
 
 
-h3, .font-hina{
+h3,h2,.font-hina{
   font-family: 'Hina Mincho', serif;
   color: #5D535E;
   letter-spacing: 0.1em;
@@ -146,10 +155,16 @@ text-align: center;
 .semicircle-top {
   width: 150px;
   height: 75px;
-  border: solid 4px #696969;
+  border: solid 1px #d6d0d0;
   border-radius: 75px 75px 0 0; /* 下側を丸める */
-  border-bottom: 0; /* 直線部分を消す */
+  border-bottom: solid 1px white; /* 直線部分を消す */
   margin: 10px;
-  border: none;
+  // border: none;
   background-color: white;
+  position: relative;
+			top: 2px;
+}
+
+.gallery-box{
+  border: solid 1px #d6d0d0;
 }

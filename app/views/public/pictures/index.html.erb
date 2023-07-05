@@ -1,13 +1,19 @@
 
 <div class="container">
 
-    <div class="row justify-content-center">
-        <h3>Gallery</h3>
+    <div class="row justify-content-center my-3">
+        <h2>Gallery</h2>
     </div>
-    <div class="row justify-content-center">
-        <%= link_to 'People', '#people-gallery' %><span>/</span>
-        <%= link_to 'Animals', '#animals-gallery' %><span>/</span>
-        <%= link_to 'Others', '#others-gallery' %>
+    <div class="row justify-content-center icon mb-5">
+        <div class="btn">
+          <%= link_to 'People', '#people-gallery' %><%= image_tag "icon-person.jpg", size: "40x40" %>
+        </div>
+        <div class="btn">
+          <%= link_to 'Animals', '#animals-gallery' %><%= image_tag "icon-animal.jpg", size: "40x40" %>
+        </div>
+        <div class="btn">
+          <%= link_to 'Others', '#others-gallery' %><%= image_tag "icon-other.jpg", size: "40x40" %>
+        </div>
     </div>
 
 
@@ -24,39 +30,48 @@
 
 
       <div class="row justify-content-center">
-        <p id="people-gallery", class="semicircle-top text-center mb-0">People</p>
+        <ul id="people-gallery", class="list-unstyled semicircle-top text-center mb-0">
+          <li>People</li>
+          <li><%= image_tag "icon-person.jpg", size: "50x50" %></li>
+        </ul>
       </div>
-      <div class="border border-white border-0 bg-white px-3 py-3">
+      <div class="gallery-box bg-white px-3 py-3">
         <% @pictures.each do |picture| %>
           <% if picture.genre_id == 1 %>
               <% if picture.image.attached? %>
                   <%= link_to image_tag(picture.image, size: "200x200"), picture_path(picture.id) %>
               <% else %>
-                  <%= link_to image_tag('no_image', size: "200x200"), picture_path(picture.id) %>
+                  <%= link_to image_tag(no_image, size: "200x200"), picture_path(picture.id) %>
               <% end %>
             <% end %>
           <% end %>
       </div>
 
       <div class="row justify-content-center">
-        <p id="animals-gallery", class="semicircle-top text-center mb-0">Animals</p>
+        <ul id="animals-gallery", class="list-unstyled semicircle-top text-center mb-0">
+          <li>Animals</li>
+          <li><%= image_tag "icon-animal.jpg", size: "50x50" %></li>
+        </ul>
       </div>
-      <div class="border border-white border-0 bg-white px-3 py-3">
+      <div class="gallery-box bg-white px-3 py-3">
         <% @pictures.each do |picture| %>
           <% if picture.genre_id == 2 %>
             <% if picture.image.attached? %>
                 <%= link_to image_tag(picture.image, size: "200x200"), picture_path(picture.id) %>
             <% else %>
-                <%= link_to image_tag('no_image', size: "200x200"), picture_path(picture.id) %>
+                <%= link_to image_tag(no_image, size: "200x200"), picture_path(picture.id) %>
             <% end %>
           <% end %>
         <% end %>
       </div>
 
       <div class="row justify-content-center">
-        <p id="others-gallery", class="semicircle-top text-center mb-0">Others</p>
+        <ul id="others-gallery", class="list-unstyled semicircle-top text-center mb-0">
+          <li>Others</li>
+          <li><%= image_tag "icon-other.jpg", size: "50x50" %></li>
+        </ul>
       </div>
-      <div class="border border-white border-0 bg-white px-3 py-3">
+      <div class="gallery-box bg-white px-3 py-3">
         <% @pictures.each do |picture| %>
           <% if picture.genre_id == 3 %>
             <% if picture.image.attached? %>
