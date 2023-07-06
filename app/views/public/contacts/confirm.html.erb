@@ -1,18 +1,36 @@
 <div class="container">
   <div class="row justify-content-center">
-    <h3>Contact　確認</h3>
+    <div class="col-12 flex-column text-center">
+      <h3>Contact</h3>
+      <br>
+      <h5>入力内容の確認</h5>
+    </div>
   </div>
   <div class="row justify-content-center">
-    <ul class="list-unstyled">
-        <%= form_with model: @contact, url: contacts_path do |f| %>
-
-        <%= @contact.name %>
-        <%= @contact.email %>
-        <%= @contact.message %>
-
-          <li class="text-center"><%= f.submit "Submit", class: "btn btn:hover" %></li>
-
-        <% end %>
+    <ul class="list-unstyled col-12 col-md-8">
+        <li>Name</li>
+        <li class="bg-white p-1"><%= @contact.name %></li>
+        <li>Mail Address</li>
+        <li class="bg-white p-1"><%= @contact.email %></li>
+        <li>Message</li>
+        <li class="bg-white p-1"><%= @contact.message %></li>
     </ul>
+  </div>
+  <div class="row justify-content-center">
+        <%= form_for @contact, method: :post, url: contacts_back_path do |form| %>
+        	<%= form.hidden_field :name %>
+        	<%= form.hidden_field :email %>
+        	<%= form.hidden_field :message %>
+        	<%= form.submit '入力画面に戻る', class: "btn btn:hover mx-1 text-center" %>
+        <% end %>
+
+        <%= form_for @contact, method: :post, url: contacts_path do |form| %>
+        	<%= form.hidden_field :name %>
+        	<%= form.hidden_field :email %>
+        	<%= form.hidden_field :message %>
+        	<%= form.submit '送信する', class: "btn btn:hover mx-1 text-center" %>
+        <% end %>
+    </div>
+
   </div>
 </div>

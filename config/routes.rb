@@ -25,6 +25,7 @@ devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
     resources :pictures, only: [:index, :show]
     resources :contacts, only: [:new,:create]
     post 'contacts/confirm', to: 'contacts#confirm'
+    post 'contacts/back', to: 'contacts#back'
     get 'contacts/complete', to: 'contacts#complete'
   end
 
