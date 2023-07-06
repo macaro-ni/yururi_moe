@@ -4,8 +4,8 @@ class Public::ContactsController < ApplicationController
   end
 
   def create
-    contact=Contact.new(contact_params)
-    if contact.save
+    @contact=Contact.new(contact_params)
+    if @contact.save
       redirect_to contacts_complete_path
     else
       render :new
@@ -15,16 +15,16 @@ class Public::ContactsController < ApplicationController
   def confirm
     @contact=Contact.new(contact_params)
   end
-  
+
   def back
-    @contact=Contact.new(@contact_params)
+    @contact=Contact.new(contact_params)
     render :new
   end
 
   def complete
   end
-  
-  
+
+
   private
 def contact_params
   params.require(:contact).permit(:name,:email,:message)
