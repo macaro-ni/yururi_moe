@@ -1,0 +1,11 @@
+<div class="container justify-content-center">
+  <h3>お問い合わせ詳細</h3>
+    <ul class="list list-unstyled">
+      <li>名前：<%= @contact.name %></li>
+      <li>メールアドレス：<%= @contact.email %></li>
+      <li>お問合せ内容：<%= @contact.message %></li>
+      <li>日付：<%= @contact.created_at.strftime('%Y/%m/%d %H:%M') %></li>
+    </ul>
+  </table>
+  <%= link_to "お問合せ一覧へ戻る", admin_contacts_path %>
+</div>

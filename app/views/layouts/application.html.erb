@@ -47,6 +47,9 @@
                     <%= link_to 'イラスト登録', new_admin_picture_path, class: 'nav-link' %>
                   </li>
                   <li class="nav-item">
+                    <%= link_to "お問い合わせ", admin_contacts_path, class: 'nav-link' %>
+                  </li>
+                  <li class="nav-item">
                     <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: 'nav-link' %>
                   </li>
                 <% else %>

@@ -1,0 +1,22 @@
+<div class="container">
+  <h3>お問い合わせ一覧</h3>
+  <table class="table bg-white">
+    <thead>
+    <tr>
+      <th>名前</th>
+      <th>お問い合わせ内容</th>
+      <th>日時</th>
+    </tr>
+    <tbody>
+      <% @contacts.each do |contact| %>
+      <tr>
+        <td><%= contact.name %></td>
+        <td><%= contact.message.truncate(15) %></td>
+        <td><%= contact.created_at.strftime('%Y/%m/%d %H:%M')  %></td>
+        <td><%= link_to "詳細", admin_contact_path(contact.id) %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>
