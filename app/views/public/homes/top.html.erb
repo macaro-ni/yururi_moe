@@ -30,7 +30,7 @@
 
                 <div class="text-center">
                     <p>美しい文字を身につけるための文字練習アプリです。お手本を見ながら繰り返し練習する事で、綺麗な文字が書けるようになることを目的としています。(タブレット端末推称)</p>
-                    <%= link_to 'Lets practice!', 'https://bimozi-training.com', class: "btn .btn:hover py-2 px-5" %>
+                    <%= link_to 'Lets practice!', 'https://bimozi-training.com', class: "btn btn:hover py-2 px-5" %>
                 </div>
             </div>
         </div>
@@ -64,22 +64,20 @@
                             <p>ゆるっと暮らす2人と、その仲間たちです。</p>
                         </div>
                     </div>
-                    <div class="row justify-content-center">
-                        <p>-スタンプイラストをクリックするとLINE STOREに遷移します-</p>
-                    </div>
+                        <p class="text-center">-スタンプイラストをクリックするとLINE STOREに遷移します-</p>
 
         <div class="row justify-content-center mt-5">
             <h3 class="ribbon1 col-xl-3 col-md-5 col-10">イラストギャラリー</h3>
         </div>
         <br>
 
-        <div class="col-12 mx-auto">
+        <div class="mx-auto">
             <% @pictures.each do |picture| %>
                 <%= link_to image_tag(picture.image, size: "200x200"), picture_path(picture.id) %>
             <% end %>
         </div>
         <div class="text-center mt-4">
-            <%= link_to 'more view', pictures_path, class: "btn .btn:hover py-2 px-5 text-center" %>
+            <%= link_to 'more view', pictures_path, class: "btn btn:hover py-2 px-5 text-center" %>
         </div>
 
 
