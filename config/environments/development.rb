@@ -85,7 +85,7 @@ Rails.application.configure do
    port:                  587,
    domain:               'gmail.com',
    user_name:            ENV['ADMIN_MAIL_ADDRESS'],
-  password:              "tevgpfornnaaanxr",#ENV['ADMIN_MAIL_PASSWORD'],
+  password:              "tevgpfornnaaanxr",#ENV['ADMIN_MAIL_PASSWORD']ではエラーが出たため,アプリケーション固有のパスワードを生成した,
    authentication:       'plain',
    enable_starttls_auto:  true
   }

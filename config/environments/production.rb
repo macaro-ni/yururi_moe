@@ -117,7 +117,7 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
-  
+
   # Action Mailerメール送信設定
   # config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
@@ -126,7 +126,7 @@ Rails.application.configure do
    port:                  587,
    domain:               'gmail.com',
    user_name:            ENV['ADMIN_MAIL_ADDRESS'],
-  password:              "tevgpfornnaaanxr",#ENV['ADMIN_MAIL_PASSWORD']ではエラーが出たため,アプリケーション固有のパスワードを生成した
+  password:              "wthonhcgrcpyzfdb",
    authentication:       'plain',
    enable_starttls_auto:  true
   }

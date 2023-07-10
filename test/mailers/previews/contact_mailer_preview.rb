@@ -4,5 +4,5 @@ class ContactMailerPreview < ActionMailer::Preview
    contact= Contact.new(name "あや", message: "問い合わせテストです。")
    
    InquiryMailer.send_mail(contact)
-   
+ end
 end
