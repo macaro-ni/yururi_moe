@@ -11,7 +11,7 @@ const opt = {
 }
 
 // Swiperを実行(初期化)
-/* global $*/
+/* global Swiper $*/
 $(document).on('turbolinks:load', function() {
     let swiper = new Swiper('.swiper',opt);
 });
