@@ -119,7 +119,7 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
   # Action Mailerメール送信設定
-  # config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
    address:              'smtp.gmail.com',
