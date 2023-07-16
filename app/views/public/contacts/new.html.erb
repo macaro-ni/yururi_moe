@@ -19,13 +19,13 @@
     <ul class="list-unstyled">
         <%= form_with model: @contact, url: contacts_confirm_path do |f| %>
           <li><%= f.label :name, "Name", class: "mb-0" %></li>
-          <%= f.text_field :name, size: "30", style: "border: none" %>
+          <%= f.text_field :name, style: "border: none" %>
 
           <li><%= f.label :email, "Mail Address", class: "mb-0" %></li>
-          <%= f.email_field :email, size: "30", style: "border: none" %>
+          <%= f.email_field :email, style: "border: none" %>
 
           <li><%= f.label :message, "Message", class: "mb-0" %></li>
-          <%= f.text_area :message, size: "30", style: "border: none" %>
+          <%= f.text_area :message, style: "border: none" %>
 
           <li class="text-center"><%= f.submit "Submit", class: "btn btn:hover" %></li>
 
