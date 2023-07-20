@@ -27,3 +27,18 @@ $(function() {
                 event.preventDefault();
               });
             });
+
+// arctext.jsを使って文字をカーブさせた
+$(function() {
+    $("#arctext-stamp1").arctext({
+        radius : 120,
+    });
+
+    $("#arctext-stamp2").arctext({
+        radius : 118,
+    });
+
+    $("#arctext-stamp3").arctext({
+        radius : 120,
+    });
+});
