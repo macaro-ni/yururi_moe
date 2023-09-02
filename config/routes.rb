@@ -28,6 +28,9 @@ devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
     post 'contacts/confirm', to: 'contacts#confirm'
     post 'contacts/back', to: 'contacts#back'
     get 'contacts/complete', to: 'contacts#complete'
+    
+    get 'quizzes/top'
+    get 'quizzes/privacy'
   end
 
 

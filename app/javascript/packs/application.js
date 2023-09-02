@@ -19,7 +19,7 @@ import "script.js"
 import Swiper from 'swiper/swiper-bundle.js';
 import 'swiper/swiper-bundle.css';
 
-// arctext.jsのため追記？
+// arctext.jsのため追記
 import "jquery.arctext.js"
 
 Rails.start()
