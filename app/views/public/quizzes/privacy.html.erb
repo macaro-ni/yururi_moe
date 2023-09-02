@@ -1,22 +1,32 @@
 <div class="container">
-  <div class="row col-12 justify-content-center">
-    <div class="text-center">
+  <div class="row col-12">
 
-      <h3>栄養学クイズアプリ プライバシーポリシー</h3>
-      
+
+      <h3 class="my-3">栄養学クイズアプリ プライバシーポリシー</h3>
+
       <p>■個人情報の収集<br>
-      本アプリは、広告配信のためにGoogle 広告、Google AdMob、利用状況解析のためにGoogle Firebase Analyticsを使用しています。<br>
-      
-      ■広告について<br>
+      本アプリは、広告配信のためにGoogle 広告、Google AdMob、利用状況解析のためにGoogle Firebase Analyticsを使用しています。</p>
+
+      <p>■広告について<br>
       本アプリでは、広告配信を目的として以下の広告配信事業者がご利用者の情報を自動取得する場合がございます。取得する情報、利用目的、第三者への提供等につきましては、以下の広告配信事業者のアプリケーション・プライバシーポリシーのリンクよりご確認ください。
       </p>
-      
-      <p>AdMob（Google Inc.）</p>
-      <% link_to 'http://www.google.com/intl/ja/policies/technologies/ads/' %>
-      
-      <p>Google 広告に関するポリシー</p>
-      <% link_to 'https://policies.google.com/technologies/ads?hl=ja' %>
-      
+
+      <p>AdMob（Google Inc.）<br>
+      <%= link_to 'http://www.google.com/intl/ja/policies/technologies/ads/', "http://www.google.com/intl/ja/policies/technologies/ads/", class: "border-bottom border-white" %></p>
+
+      <p>Google 広告に関するポリシー<br>
+      <%= link_to 'https://policies.google.com/technologies/ads?hl=ja', "https://policies.google.com/technologies/ads?hl=ja", class: "border-bottom border-white" %></p>
+
+      <p>■免責事項<br>
+      ️利用上の不具合・不都合に対して可能な限りサポートを行っておりますが、利用者が本アプリを利用して生じた損害に関して、開発元は責任を負わないものとします。</p>
+
+      <p>■プライバシーポリシーの変更<br>
+      本ポリシーの内容は、法令その他本ポリシーに別段の定めのある事項を除いて、ユーザーに通知することなく，変更することができるものとします。
+      また、当方が別途定める場合を除いて，変更後のプライバシーポリシーは，本ウェブサイトに掲載したときから効力を生じるものとします。</p>
+
+      <p>■お問い合わせ窓口<br>
+      本ポリシーに関するお問い合わせは、以下のcontactページからお願いいたします。
+      <%= link_to 'contact', new_contact_path, class: "border-bottom border-white" %></p>
 
   </div>
 </div>
